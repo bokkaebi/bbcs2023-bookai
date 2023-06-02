@@ -12,20 +12,36 @@
 
     <div id="header">
         <span>
-            <a href="/"><p>Bot</p></a>
+            <a href="/"><p>Book Recommender</p></a>
             <a href="/about"><p>About</p></a>
         </span>
     </div>
 
     <div id="content">
-        <p id="guiding-text">tags can be genre, title, author, etc. of past books maybe</p>
+        <p id="guiding-text">
+            Input the title of a book that you have recently read or liked.<br/>
+            You can adjust the number of books and how similar the books are as additional filters.
+        </p>
         <form id="input-form">
-            <input id="input-field" type="text" placeholder="Enter your tags here!">
-            <button id="submit-button" type="submit">
-                <p>Search!</p>
-            </button>
+            <input class="input-field" id="input-title" type="text" placeholder="Enter the title of the book.">
+            <input class="input-field" id="input-recommendation-size" type="number" placeholder="Enter how many recommendations you want.">
+            <div id="div-dropdown">
+                <label for="input-accuracy">Choose how similar you want the books to be:</label>
+                    <select name="input-accuracy" id="input-accuracy">
+                        <option value="similar90">Very Similar (&gt90%)</option>
+                        <option value="similar70">Similar (&gt70%)</option>
+                        <option value="similar50">Not Similar (&gt50%)</option>
+                        <option value="similar0">Completely Different(0-50%)</option>
+                    </select>
+            </div>
 
+            <div id="div-submit">
+                <button id="submit-button" type="submit">
+                    <p>Search!</p>
+                </button>
+            </div>
             
+            <!--
             <div id="input-checkboxes">
                 <p id="genre-text"><u>List of common genres:</u></p>
                 <table id="checkbox-table">
@@ -52,6 +68,7 @@
                 </table>
 
             </div>
+            -->
         </form>
     </div>
 

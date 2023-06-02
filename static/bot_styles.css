@@ -11,15 +11,22 @@
 }
 
 #guiding-text {
-    text-align: center
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+
 }
 
 
+#input-form {
+    align-items: center;
+
+}
 /*stolen from some website i forgot the name of*/
-#input-field {
+.input-field {
     padding-left: 20px;
     height: 50px;
-    width: 500px;
+    width: 800px;
     margin: 0 auto;
     border: none;
     border-bottom: solid gainsboro 1px;
@@ -30,14 +37,15 @@
     background-color: white;
     border-radius: 50px;
     margin-top: 30px;
-    margin-bottom: 30px;
+    font-size: 15px;
+    font-family: IBM Plex Sans;
 }
 
-#input-field:hover {
+.input-field:hover {
     background-color: rgba(227, 234, 243, 0.933);
 }
 
-
+/*
 #input-checkboxes {
     width: 50%;
     margin: 0 auto;
@@ -46,7 +54,22 @@
 
 }
 
-
 #genre-text {
     font-size: 20px;
+}
+*/
+
+#div-dropdown {
+    padding-top: 30px;
+}
+
+#div-submit {
+    padding-top: 30px;
+}
+
+#submit-button {
+    width: 100px;
+    text-align: center;
+    border-radius: 10px;
+    /* border: none; */
 }

@@ -1,13 +1,10 @@
 
 body {
     margin: 0px;
-}
-
-p {
     font-family: IBM Plex Sans;
     font-weight: 500;
-
 }
+
 
 
 h2 {
@@ -28,10 +25,10 @@ h2 {
     float: left;
     text-align: center;
     padding: 0px;
-    margin: 10px 40px 0px 0px;
+    margin: 6px 40px 0px 0px;
 
     text-decoration: none;
-    font-size: 16px;
+    font-size: 17px;
 
     height: calc(100% - 16px);
 
