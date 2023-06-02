@@ -15,9 +15,5 @@ def about():
     return render_template('about.html')
 
 
-# Problems to solve:
-# search up more about flask lmao
-# 1. css not working
-# 2. links of buttons
 
 app.run(debug=True, port=5001)
