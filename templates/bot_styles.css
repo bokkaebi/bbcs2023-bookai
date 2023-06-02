@@ -1,0 +1,52 @@
+#content {
+    top:30%;
+    left:50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    padding: 3rem;
+    align-items: center;
+    align-content: center;
+
+}
+
+#guiding-text {
+    text-align: center
+}
+
+
+/*stolen from some website i forgot the name of*/
+#input-field {
+    padding-left: 20px;
+    height: 50px;
+    width: 500px;
+    margin: 0 auto;
+    border: none;
+    border-bottom: solid gainsboro 1px;
+    transition: all 500ms linear;
+    text-decoration: none;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.2), 2px 1px 20px 0px rgba(0, 0, 0, 0.19);
+    z-index: 2;
+    background-color: white;
+    border-radius: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#input-field:hover {
+    background-color: rgba(227, 234, 243, 0.933);
+}
+
+
+#input-checkboxes {
+    width: 50%;
+    margin: 0 auto;
+    border: none;
+    border-spacing: 10px;
+
+}
+
+
+#genre-text {
+    font-size: 20px;
+}

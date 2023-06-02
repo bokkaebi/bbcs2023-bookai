@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/templates/header_styles.css">
+        <link rel="stylesheet" href="/templates/bot_styles.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500">
+    </head>
+<body>
+
+    <div id="header">
+        <span>
+            <a href="/templates/bot.html"><p>Bot</p></a>
+            <a href="/templates/about.html"><p>About</p></a>
+        </span>
+    </div>
+
+    <div id="content">
+        <p id="guiding-text">tags can be genre, title, author, etc. of past books maybe</p>
+        <form id="input-form">
+            <input id="input-field" type="text" placeholder="Enter your tags here!">
+            <button id="submit-button" type="submit">
+                <p>Search!</p>
+            </button>
+
+            
+            <div id="input-checkboxes">
+                <p id="genre-text"><u>List of common genres:</u></p>
+                <table id="checkbox-table">
+                    <tr>
+                        <td>
+                            <input type="checkbox" id ="checkbox_fiction" name="fiction">
+                            <label for="checkbox_fiction">Fiction</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id ="checkbox_nonfiction" name="nonfiction">
+                            <label for="checkbox_nonfiction">Non-fiction</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" id ="checkbox_horror" name="horror">
+                            <label for="checkbox_horror">Horror</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" id ="checkbox_romance" name="romance">
+                            <label for="Romance">Romance</label>
+                        </td>
+                    </tr>
+                </table>
+
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
