@@ -2,7 +2,7 @@ document.getElementById("input-form").addEventListener("submit", function(event)
   	event.preventDefault()
 
     
-    const cardContainer = document.getElementById('div-recommedations');
+    const cardContainer = document.getElementById('div-recommendations');
 
 	  var bookidValue = document.getElementById("input-title").value
 
@@ -11,16 +11,17 @@ document.getElementById("input-form").addEventListener("submit", function(event)
 
 async function getRecommendations(book_id) {
   
-  const cardContainer = document.getElementById('div-recommedations');
+  const cardContainer = document.getElementById('div-recommendations');
   const response = await (await fetch("recommend?book_id="+book_id)).json()
 
-  recommedations = response['recommendations']
-  console.log(recommedations)
+  recommendations = response['recommendations']
+  console.log(recommendations)
 
-    for (const book of recommedations) {
-      const card = createCard(book['title'], book['author']);
-      cardContainer.appendChild(card);
-    }
+  cardContainer.replaceChildren();
+  for (const book of recommendations) {
+    const card = createCard(book['title'], book['author']);
+    cardContainer.appendChild(card);
+  }
 }
 
 

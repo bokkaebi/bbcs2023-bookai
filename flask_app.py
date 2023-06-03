@@ -34,7 +34,7 @@ def about():
     return render_template('about.html')
 
 @app.route('/recommend', methods=['GET'])
-def recomment():
+def recommend():
     bookid = request.args.get("book_id")
 
     results = get_recommendations(int(bookid), cos_sim)
