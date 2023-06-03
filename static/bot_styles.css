@@ -114,16 +114,17 @@
 }
 
 #div-recommendations {
-    /* width: 800px; */
-    /* display: flex;
-    justify-content: center; */
+    margin: 0 auto;
+    width: 800px;
+
+
 }
 
 .recommendation-result-card {
-    width: 800px;
     border-radius: 5px;
     background-color: lightgrey;
     padding: 0.5em 2em;
     margin-top: 12px;
+
     
 }
