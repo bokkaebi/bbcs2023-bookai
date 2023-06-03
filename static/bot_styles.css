@@ -73,3 +73,10 @@
     border-radius: 10px;
     /* border: none; */
 }
+
+.recommendation-result-card {
+    border-radius: 5px;
+    background-color: lightgrey;
+    padding: 0.5em 2em;
+    margin-top: 12px;
+}
