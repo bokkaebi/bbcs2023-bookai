@@ -19,12 +19,12 @@ async function getRecommendations(book_id, k) {
   const cardContainer = document.getElementById('div-recommendations');
   const response = await (await fetch("recommend?book_id=" + book_id + "&k=" + k)).json()
 
-  recommendations = response['recommendations']
+  let recommendations = response['recommendations']
   console.log(recommendations)
 
   cardContainer.replaceChildren();
-  for (const book of recommendations) {
-    const card = createCard(book['title'], book['author']);
+  for (var book of recommendations) {
+    var card = createCard(book['title'], book['author'], book['description'], book['link']);
     cardContainer.appendChild(card);
   }
 }
@@ -33,7 +33,7 @@ async function getRecommendations(book_id, k) {
 
 
 // Function to create a card element
-function createCard(title, author) {
+function createCard(title, author, description, link) {
     const card = document.createElement('div');
     card.className = "recommendation-result-card"
     card.classList.add('card');
@@ -53,6 +53,14 @@ function createCard(title, author) {
     const cardAuthor = document.createElement('p');
     cardAuthor.textContent = `Author: ${author}`;
     cardContent.appendChild(cardAuthor);
+
+    const cardDescription = document.createElement('p');
+    cardDescription.textContent = `Description: ${description}`;
+    cardContent.appendChild(cardDescription);
+
+    const cardLink = document.createElement('p');
+    cardLink.innerHTML = `<a target="blank" href="${link}">Buy the book!</a>`;
+    cardContent.appendChild(cardLink);
     
     // const cardSimilarity = document.createElement('p');
     // cardSimilarity.textContent = `Similarity: ${similarity*100}%`;

@@ -22,7 +22,7 @@ def get_recommendations(book_id, similarity_matrix, k):
     similar_books = list(enumerate(similarity_matrix[int(book_id)]))
     similar_books = sorted(similar_books, key=lambda x: x[1], reverse=True)
     similar_books = similar_books[1:k+1]
-    recommended_books = [{"title": data.iloc[i[0]]["Book"], "author": data.iloc[i[0]]["Author"]} for i in similar_books]
+    recommended_books = [{"title": data.iloc[i[0]]["Book"], "author": data.iloc[i[0]]["Author"], "description": data.iloc[i[0]]["Description"], "link": data.iloc[i[0]]["URL"]} for i in similar_books]
     return recommended_books
 cos_sim = util.cos_sim(embeddings, embeddings)
 
