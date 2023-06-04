@@ -39,6 +39,7 @@
     width: 100%;
     margin: 0 auto;
     border: none;
+    outline: none;
     border-bottom: solid gainsboro 1px;
     transition: all 500ms linear;
     text-decoration: none;

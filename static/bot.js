@@ -4,15 +4,20 @@ document.getElementById("input-form").addEventListener("submit", function(event)
     
     const cardContainer = document.getElementById('div-recommendations');
 
-	  var bookidValue = document.getElementById("input-title").value
-
-    getRecommendations(bookidValue)
+	  var bookName = document.getElementById("input-title").value
+    var k = document.getElementById("input-recommendation-size").value
+    getBookList().then(function(result) {
+      bookTitles = result;
+      bookidValue = bookTitles.indexOf(bookName)
+      console.log("Book Id: " + bookidValue)
+      getRecommendations(bookidValue, k)
+    });
 });
 
-async function getRecommendations(book_id) {
+async function getRecommendations(book_id, k) {
   
   const cardContainer = document.getElementById('div-recommendations');
-  const response = await (await fetch("recommend?book_id="+book_id)).json()
+  const response = await (await fetch("recommend?book_id=" + book_id + "&k=" + k)).json()
 
   recommendations = response['recommendations']
   console.log(recommendations)
@@ -56,6 +61,13 @@ function createCard(title, author) {
     card.appendChild(cardContent);
     return card;
   }
+
+  async function getBookList() {
+    const response = await (await fetch("/get_csv_data")).json()
+    return response['books']
+  }
+
+  
 
 
 
