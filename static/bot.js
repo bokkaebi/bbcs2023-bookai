@@ -6,6 +6,26 @@ document.getElementById("input-form").addEventListener("submit", function(event)
 
 	  var bookName = document.getElementById("input-title").value
     var k = document.getElementById("input-recommendation-size").value
+
+    console.log('book: ' + bookName)
+    console.log('size: ' + k)
+    var sizeErrorElement = document.getElementById("error-message-inputsize")
+    var bookErrorElement = document.getElementById("error-message-book")
+    if (k < 1) {
+      sizeErrorElement.style.display = 'inline-block'
+    } else {
+      sizeErrorElement.style.display = 'none'
+    }
+
+    if (bookName == "") {
+      bookErrorElement.style.display = 'inline-block'
+    }
+    else {
+      bookErrorElement.style.display = 'none'
+    }
+
+
+
     getBookList().then(function(result) {
       bookTitles = result;
       bookidValue = bookTitles.indexOf(bookName)

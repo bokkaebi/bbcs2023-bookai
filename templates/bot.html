@@ -25,7 +25,8 @@
 
         <div id="form-div">
             <form id="input-form">
-                <input class="input-field" id="input-recommendation-size" type="number" placeholder="Enter the no. of recommendations you want.">
+                <input class="input-field" id="input-recommendation-size" type="number" step="1" placeholder="Enter the no. of recommendations you want.">
+                <p id="error-message-inputsize" class="error-message">Please enter an integer larger than 0.</p>
                 
                 <!-- <div id="div-dropdown">
                     <label for="input-accuracy">Choose how similar you want the books to be:</label>
@@ -38,6 +39,7 @@
                 </div> -->
                 
                 <input class="input-field" id="input-title" type="text" placeholder="Enter the title of the book.">
+                <p id="error-message-book" class="error-message">Please select a book.</p>
                 <ul class="booklist" id="booklist"></ul>
                 
 

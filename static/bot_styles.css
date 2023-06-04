@@ -127,3 +127,11 @@
     padding: 0.5em 2em;
     margin-top: 12px;    
 }
+
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    display: none;
+    padding-left: 20px;
+}
